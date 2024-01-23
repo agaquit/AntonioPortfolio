@@ -38,6 +38,15 @@
             .navbar-nav .nav-link:hover {
                 color: #f8f9fa;
             }
+
+        /* Adjust the width of the profile image */
+        .profile-image {
+            width: 100%; /* Make the image fill the container width */
+            max-width: 200px; /* Set a maximum width to control the size */
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%; /* Optional: Apply a border-radius for a rounded image */
+        }
     </style>
 </head>
 <body>
@@ -52,15 +61,18 @@
         <!-- Add the image above the "About Me" section -->
         <img class="profile-image" src="/images/antoniogaquit.jpg" alt="Antonio's Profile Image">
 
+        <div class="container">
+            <h1 class="mt-5 mb-4">About Me</h1>
 
-    <div class="container">
-        <h1 class="mt-5 mb-4">About Me</h1>
+            <!-- Your about me content goes here -->
+            <div>
+                <p>Hello, my name is Antonio Gaquit. I am 28 years old and I am on my second year as a .NET developer student at KYH Yrkeshögskola. My education is 2 years, starting from August 2022, and graduation is in June 2024.</p>
+                <p>Studying to become a .NET developer has been really hard as this is the first time for me coding. I have never coded before starting this course. It has been really fun along the way, learning something every day, and hopefully, after graduation, I can get my first job and can finally call myself a .NET developer.</p>
+                <p>Other than coding, I love to play football and go to the gym to workout. It's important to workout in my opinion after a long day sitting at your screen all day. On the weekends, I like to drink and hang out with my friends at the bar.</p>
+                <p>Feel free to download my CV!</p>
+            </div>
 
-        <!-- Your about me content goes here -->
-        <div>
-            <p>Hello, my name is Antonio Gaquit. I am 28 years old and I am on my second year as a .NET developer student at KYH Yrkeshögskola. My education is 2 years, starting from August 2022, and graduation is in June 2024.</p>
-            <p>Studying to become a .NET developer has been really hard as this is the first time for me coding. I have never coded before starting this course. It has been really fun along the way, learning something every day, and hopefully, after graduation, I can get my first job and can finally call myself a .NET developer.</p>
-            <p>Other than coding, I love to play football and go to the gym to workout. It's important to workout in my opinion after a long day sitting at your screen all day. On the weekends, I like to drink and hang out with my friends at the bar.</p>
+            <a href="cv/AGaquit CV (1).pdf" class="btn btn-primary download-link" download>Download CV</a>
         </div>
 
     </div>
