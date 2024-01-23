@@ -2,3 +2,71 @@
 @model AntonioPortfolio.Pages.Sections.AboutMeModel
 @{
 }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me - My Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-rbs5kPKGIdE2UHJlDXwW5l9m7Jj5AbLK5Ei5kgXsA6XwOD11T8r/SOrPbzPNIz6" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .navbar {
+            background-color: transparent; /* Updated to make the navbar background transparent */
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+            .navbar-brand:hover,
+            .navbar-nav .nav-link:hover {
+                color: #f8f9fa;
+            }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <!-- Navbar content goes here, if you decide to add any -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Add the image above the "About Me" section -->
+        <img class="profile-image" src="/images/antoniogaquit.jpg" alt="Antonio's Profile Image">
+
+
+    <div class="container">
+        <h1 class="mt-5 mb-4">About Me</h1>
+
+        <!-- Your about me content goes here -->
+        <div>
+            <p>Hello, my name is Antonio Gaquit. I am 28 years old and I am on my second year as a .NET developer student at KYH Yrkeshögskola. My education is 2 years, starting from August 2022, and graduation is in June 2024.</p>
+            <p>Studying to become a .NET developer has been really hard as this is the first time for me coding. I have never coded before starting this course. It has been really fun along the way, learning something every day, and hopefully, after graduation, I can get my first job and can finally call myself a .NET developer.</p>
+            <p>Other than coding, I love to play football and go to the gym to workout. It's important to workout in my opinion after a long day sitting at your screen all day. On the weekends, I like to drink and hang out with my friends at the bar.</p>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+</body>
+</html>
