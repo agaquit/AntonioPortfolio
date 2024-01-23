@@ -1,7 +1,5 @@
 ﻿@page
 @model AntonioPortfolio.Pages.Sections.ContactModel
-@{
-}
 
 <!DOCTYPE html>
 <html>
@@ -26,7 +24,7 @@
         }
 
         .navbar {
-            background-color: transparent; /* Updated to make the navbar background transparent */
+            background-color: transparent;
         }
 
         .navbar-brand,
@@ -38,6 +36,15 @@
             .navbar-nav .nav-link:hover {
                 color: #f8f9fa;
             }
+
+        /* Additional styles for the form */
+        form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -51,11 +58,44 @@
     <div class="container">
         <h1 class="mt-5 mb-4">Contact</h1>
 
-        <!-- Your contact content goes here -->
+        <!-- Contact form -->
+        <form asp-page-handler="SubmitForm" method="post">
+            <div class="form-group">
+                <label asp-for="Email">Email:</label>
+                <input asp-for="Email" class="form-control" required>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Subject">Subject:</label>
+                <input asp-for="Subject" class="form-control" required>
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Message">Message:</label>
+                <textarea asp-for="Message" class="form-control" rows="4" required></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+
+        <!-- Display area for success or error message -->
+        <div id="messageDisplay"></div>
     </div>
 
     <!-- Bootstrap JS and Popper.js (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-csRoBiQ8U9dF6o4JUP7uOz7UkkGGlQnseO6T/Q2FcD6D5I3TI7cF9bBc4UqzI3uT" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+        // Add your custom scripts here if needed
+    </script>
 
 </body>
 </html>
